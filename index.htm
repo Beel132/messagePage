@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" />
+
+    <style>
+        @keyframes removeCardAnimation {
+            0% {
+                width: 100%;
+                opacity: 1;
+            }
+
+            100% {
+                width: 0%;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <h2 class="text-center mt-3 display-4">Send us a message!</h2>
+
+        <form>
+            <div class="form-group mt-5">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="What's your name?" spellcheck="false"
+                    autocomplete="off"> <!-- you can turn the autocomplete on if you want to -->
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="3" style="resize: none;"
+                    placeholder="Send us a message!" spellcheck="false"></textarea>
+            </div>
+
+            <div class="form-footer d-flex justify-content-between align-items-center">
+                <button class="btn btn-outline-dark" id="sendButton">Send</button>
+
+                <div class="alert alert-danger mt-2 d-none" role="alert" style="width: 15%;" id="alert">
+                    Fill <strong>all</strong> the inputs!
+                </div>
+            </div>
+        </form>
+
+        <div class="card mt-5 shadow-sm position-relative d-none" id="card">
+            <div class="card-body">
+                <h4 class="card-title text-primary" id="cardTitle">Everton Ribeiro</h4>
+
+                <button type="button" class="close position-absolute mt-2 mr-3" style="top: 0; right: 0;"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <p class="card-text text-muted px-2" id="cardDesc">Some quick example text to build on the card title
+                    and make up the
+                    bulk
+                    of the
+                    card's content. Some quick example text to build on the card title and make up the bulk of the
+                    card's content. Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
